@@ -38,3 +38,8 @@ for i in cadena:
 #Tambien podemos especificar la cantidad de iteraciones con un "range"
 for i in range(5):
     print("Hola")
+
+#Tenemos tambien la funcion eumerate
+lista_nombres = ["Luis", "David", "Fernanda"]
+for indice, valor in enumerate(lista_nombres):
+    print(indice, valor)
