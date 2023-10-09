@@ -25,7 +25,7 @@ while True:
     print("----------------------------------------------------------------")
     
 #Al haber eclarado el ciclo while con un True tenemos que incluir una instruccion donde se termine el bucle, en este caso el break    
-    if caracol1 >= 20 or caracol2 >= 20:
+    if caracol1 >= meta or caracol2 >= meta:
         break
 
 #Imprimimos el resultado de la carrera
