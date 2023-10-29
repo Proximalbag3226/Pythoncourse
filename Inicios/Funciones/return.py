@@ -14,3 +14,17 @@ resultado_final = resultado * 2
 print(f"El resultado final es {resultado_final}")
 
 #Como podemos ver la funcion no nos imprime directamente un valor si no que nos regresa ese valor almacenado en una variable para que nosotros podamos inteactuar con el 
+#Tambien podemos retornar varios valores en una misma funcion para ello veremos el siguiente ejemplo con un ejemplo anterior en este miosmo capitulo de funciones
+def calcular_precio(nombre_producto, cantidad, precio_u, descuento=0):
+    precio_final = (cantidad * precio_u) * (1-descuento)
+    return nombre_producto, cantidad, precio_final
+
+nombre, cantidad, precio = calcular_precio("medias", 3, 10)
+print(nombre)
+print(cantidad) 
+print(precio)
+
+#Como podemos obvservar la funcion ahora nos retorna  multiples valores en forma de tupla 
+#Recordemos que la tupla es una forma de almacenamiento de datos donde los datos almacenados dentro de ella son inmutables y solamente podemos consularlos con su indice
+#En este caso al retornarnos 3 valores y pedir dichos valores hemos desplegado los valores de la tupla en sus respectivas variables
+    

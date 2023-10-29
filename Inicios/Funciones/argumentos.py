@@ -38,7 +38,7 @@ imprimir_nombre(**diccionario)
 
 #En este caso si no se encuentra un descuento el argumento se estable como opcional en 0
 def calcular_precio(nombre_producto, cantidad, precio_u, descuento=0):
-    precio_final = cantidad * precio_u
+    precio_final = cantidad * precio_u * (1-descuento)
     print(f"El precio final para {nombre_producto} es {precio_final}")
 
 calcular_precio("Camisa", 3, 20)
