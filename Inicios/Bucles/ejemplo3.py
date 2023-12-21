@@ -24,7 +24,7 @@ while True:
     print(f"El caracol 2 avanza{avance_caracol_2} y lleva una distancia de {caracol2}")
     print("----------------------------------------------------------------")
     
-#Al haber eclarado el ciclo while con un True tenemos que incluir una instruccion donde se termine el bucle, en este caso el break    
+#Al haber declarado el ciclo while con un True tenemos que incluir una instruccion donde se termine el bucle, en este caso el break    
     if caracol1 >= meta or caracol2 >= meta:
         break
 
