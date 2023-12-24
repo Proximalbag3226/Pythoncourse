@@ -1,0 +1,8 @@
+Espero que alguna vez llegues a ver este repositorio que hice para que pueda ayudarte a aprender un poco sobre las bases y los proncipios de python, no se cuanto 
+tiempo me lleve completarlo para que puedas aprender correcta y satisfactoriamente, pero supongo que cuando estemos programando juntos de noche y tengas alguna duda
+sobre esto pues me la consultes y podamos avanzar en el proyecto juntos, creo que podia ser algo bueno para que puedas comenzar a aprender y tengas un material de 
+respuesto para estudiar por tu cuenta los problemas y entender cada parte de codigo y logica, tambien cuando programemos podriamos repasar juntos la logica de programacion
+pero espero que esto que hago para ti te pueda servir como un material de estudio igualmente si en algo no le entiendes para eso ando yo aqui, para que puedas aprender
+y podamos hacer ese proyecto juntos, no esta tan bien organizado pero espero en un futuro poder organizarlo mejor y lo estare actualizando cada cierto tiempo. En fin 
+este repositorio esta aqui para ti echo por mi de recopilacion de apuntes, repasos y videos espero te sirva y ps igual aqui ando pa lo que se ocupe si no entiendes algo
+tqm.

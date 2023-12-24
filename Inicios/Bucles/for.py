@@ -24,6 +24,7 @@ for clave, valor in diccionario.items():
 #Con el bucle for podemos recorrer las diferentes tipos de listas y tambien cadenas
 
 cadena = "Luis"
+print(type(cadena))
 for i in cadena:
     print(f"Hola {cadena}")
 

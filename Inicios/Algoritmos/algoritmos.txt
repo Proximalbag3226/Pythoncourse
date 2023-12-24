@@ -1,0 +1,6 @@
+Aqui estaran los algortimos mas usados en python, variando sus usos en procesamiento de datos, pero primero definamos que es un algoritmo 
+bueno un algrotimo es una serie deinsitrucciones para realizar una tarea en cuestion, estos pasos en un orden sistematico y finito, ejemplo
+de algoritmos podemos tener al resolver un cubo de rubik y al realizar los movimientos en las difetentes caras del cubo para poder llegar 
+a la resolucion del mismo, entonces, un algortimo nos permite en una serie de pasos ya predeterminados completar un objetivo dado sin importar
+el estado del objetivo a lograr, la mayoria son bastante simples mas sin embargo no inutiles, sus usos pueden ser variados y aplicados para difetentes
+objetivos

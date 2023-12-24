@@ -1,0 +1,3 @@
+Aqui estaran algunos de los ejercicios de practica que inluyen lo visto y que se pueden encontrar en diferentes entrevistas tecnicas 
+documentados y explicados para que no se me olvide como es que funcionan, algunos de ellos mas dificiles que otros pero en la mayoria son de facil entendimiento 
+y realizacion para mas a futuro en otros problemas
