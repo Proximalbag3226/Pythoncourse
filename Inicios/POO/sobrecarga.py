@@ -128,18 +128,50 @@ print(bin(resultado.valor))
 
 #Esto mismo se aplica para otros operadores logicos 
 
-#Ahora tambien podemos aplicar para las conversiones de variables
-#Para poder pasar a str
+#Por ejemplo or 
+class Mayor_precio:
+    def __init__(self, precio):
+        self.precio = precio
+    
+    def __or__(self, other):
+        if other.precio > self.precio:
+            return Mayor_precio(other.precio)
+        else:
+            return Mayor_precio(self.precio)
+        
+objeto3 = Mayor_precio(50)
+objeto4 = Mayor_precio(20)
+mayor = objeto3 | objeto4
+print(mayor.precio)
+#Ahora tambien tenemos los operadores unuarios que solamente reciben un parametro, como pueden ser para convertir valores 
 class Nombre_producto:
     def __init__(self, nombre, precio):
         self.nombre = nombre
         self.precio = precio
-        
+    
+    #Ejemplo de str
     def __str__(self):
         return f"Producto {self.nombre} con precio de {self.precio}"
+    
+    #Ejemplo de float 
+    def __float__(self):
+        return self.precio
 
 manzana = Nombre_producto("Manzana", 50)
 pera = Nombre_producto("Pera", 30.5)
 print(manzana)
 print(pera)
 
+#Ejemplo para actualizar el valor de un producto 
+
+class Precio_actulizado:
+    def __init__(self, precio):
+        self.precio = precio
+    
+    def __iadd__(self, other):
+        self.precio = self.precio + float(other)
+        return self
+    
+articulo1 = Precio_actulizado(50)
+articulo1 += 30
+print(articulo1.precio)
