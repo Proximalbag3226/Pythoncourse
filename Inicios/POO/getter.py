@@ -1,1 +1,0 @@
-#Los getter y setter 
