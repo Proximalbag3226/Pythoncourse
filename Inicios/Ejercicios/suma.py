@@ -1,0 +1,1 @@
+#Obtener la maxima suma de dos elementos adyacentes en una lista
