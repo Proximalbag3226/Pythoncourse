@@ -35,11 +35,70 @@ class Pikachu:
     def __obtener_nombre(self):
         return self.nombre
     
+    #En este metodo accedemos al metodo privado que creamos anteriormente    
     def acceder_metodo_privado(self):
         self.__obtener_nombre()
-        
+
+#Definimos una instancia y accedemos al metodo que nos retorna su nivel
 pokemon = Pikachu("Juan", 50, 500, 70, 80, "Rojo")
 print(pokemon._nivel)
 pokemon.acceder_metodo_privado()
 
-#Falta comentar 
+#Ejemplo 2
+class MiClase:
+    def __init__(self):
+        self.__atributo_privado = 42  # Atributo privado
+
+    def __metodo_privado(self):
+        print("Este es un método privado")
+
+    def acceder_metodo_privado(self):
+        self.__metodo_privado()
+
+# Crear una instancia de la clase
+objeto = MiClase()
+
+# Acceder al atributo privado (aunque es convención, no hay una restricción real)
+print(objeto._MiClase__atributo_privado)
+
+# Acceder al método privado a través de un método público
+objeto.acceder_metodo_privado()
+
+#Ejemplo 3
+class Persona:
+    def __init__(self, nombre, edad):
+        self._nombre = nombre  # Atributo protegido
+        self._edad = edad  # Atributo protegido
+
+    # Getter para obtener el nombre
+    def get_nombre(self):
+        return self._nombre
+
+    # Setter para establecer el nombre con validación
+    def set_nombre(self, nuevo_nombre):
+        if len(nuevo_nombre) > 0:
+            self._nombre = nuevo_nombre
+
+    # Getter para obtener la edad
+    def get_edad(self):
+        return self._edad
+
+    # Setter para establecer la edad con validación
+    def set_edad(self, nueva_edad):
+        if nueva_edad >= 0:
+            self._edad = nueva_edad
+
+# Crear una instancia de la clase Persona
+persona = Persona("Juan", 25)
+
+# Acceder a los atributos usando getters
+print("Nombre:", persona.get_nombre())  # Imprime "Juan"
+print("Edad:", persona.get_edad())  # Imprime 25
+
+# Modificar los atributos usando setters con validación
+persona.set_nombre("Carlos")
+persona.set_edad(30)
+
+# Acceder a los atributos actualizados usando getters
+print("Nuevo Nombre:", persona.get_nombre())  # Imprime "Carlos"
+print("Nueva Edad:", persona.get_edad())  # Imprime 30

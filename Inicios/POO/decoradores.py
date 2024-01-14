@@ -43,14 +43,23 @@ class Alumno:
     
     @nombre_lista.setter
     def nombre_lista(self, nombre_completo):
-        self.nombre, self.apellido = nombre_completo.split(' ')
+        if self.apellido or self.nombre == None:
+            raise ValueError("Datos inexistentes")
+        else:
+            self.nombre, self.apellido = nombre_completo.split(' ')
     
     @nombre_lista.deleter
     def nombre_lista(self):
         print("Eliminando")
         self.nombre = None
         self.apellido = None
-    
+
+alumno1 = Alumno("Juan", "Hernandez")
+print(alumno1.nombre_lista)
+alumno1.nombre_lista = 'Pedro Perez'
+print(alumno1.nombre_lista)
+del alumno1.nombre_lista
+print(alumno1.nombre_lista)
 #Wraps este se utiliza para preservar la informacion de metedatos de la funcion decorada como lo son, su nombre, su documentacion etc.
 #Para utilizar este decorador nesesitamos importarlo desde functools 
 #Ejemplo 
@@ -59,17 +68,18 @@ from functools import wraps
 def decorador(func):
     @wraps(func)
     def decorada(*args, **kwargs):
-        #Ejemplo de documentacion de la funcion decorada por wraps
+        "Ejemplo de documentacion de la funcion decorada por wraps"
         print("Hola mundo esta es una funcion con wraps")
         return func(*args, **kwargs)
     return decorada
 
 @decorador
 def mi_funcion():
-    #Esta es la documentacion de la funcion original 
+    "Esta es la documentacion de la funcion original" 
     print("Hola mundo esta es la funcion original")
 
 #Accedemos a los metadatos de la funcion decorada y de la funcion original 
 print("Funcion decorada", mi_funcion.__name__)
 print("Documentacion de la funcion decorada", mi_funcion.__doc__)    
 
+#Estos son solamente algunos de los decoradores ya que los mismos se pueden combinar entre si para las diferentes situaciones y como sean los requerimientos 
