@@ -32,3 +32,8 @@ if re.search("no", "El te si esta rico"):
     print("Resultado encontrado")
 else:
     print("No se encontro coincidencia")
+    
+#Dentro de las expresiones regulares tenemos lo que podemos llamar metacaracteres que son aquellos que dan indicaciones especiales sobre un funcionamiento en particular 
+#En este caso empezaremos con el punto (.)
+
+#El punto significa cualquier caracter, ejemplo
