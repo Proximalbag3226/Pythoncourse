@@ -37,3 +37,8 @@ else:
 #En este caso empezaremos con el punto (.)
 
 #El punto significa cualquier caracter, ejemplo
+r = re.search(r'g.sta', 'me gusta la pizza')
+print(r)
+
+r = re.search(r'p.za', 'me gusta la pizza')
+print(r)

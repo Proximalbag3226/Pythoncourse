@@ -92,13 +92,13 @@ class Persona:
 persona = Persona("Juan", 25)
 
 # Acceder a los atributos usando getters
-print("Nombre:", persona.get_nombre())  # Imprime "Juan"
-print("Edad:", persona.get_edad())  # Imprime 25
+print("Nombre:", persona.get_nombre())  
+print("Edad:", persona.get_edad())  
 
 # Modificar los atributos usando setters con validación
 persona.set_nombre("Carlos")
 persona.set_edad(30)
 
 # Acceder a los atributos actualizados usando getters
-print("Nuevo Nombre:", persona.get_nombre())  # Imprime "Carlos"
-print("Nueva Edad:", persona.get_edad())  # Imprime 30
+print("Nuevo Nombre:", persona.get_nombre()) 
+print("Nueva Edad:", persona.get_edad())  
