@@ -40,5 +40,29 @@ else:
 r = re.search(r'g.sta', 'me gusta la pizza')
 print(r)
 
+
 r = re.search(r'p.za', 'me gusta la pizza')
 print(r)
+
+#Y ahora un ejemplo de la implementacion
+
+import re
+
+# Texto de ejemplo
+texto = """
+Ejemplo de texto con direcciones de correo electrónico:
+juan@example.com
+maria@gmail.com
+pedro@domain.com
+"""
+
+# Definir el patrón de búsqueda para direcciones de correo electrónico
+patron_correo = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
+
+# Buscar todas las direcciones de correo electrónico en el texto
+direcciones_correo = re.findall(patron_correo, texto)
+
+# Imprimir las direcciones de correo encontradas
+print("Direcciones de correo electrónico encontradas:")
+for direccion in direcciones_correo:
+    print(direccion)
