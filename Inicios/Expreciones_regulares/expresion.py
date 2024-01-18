@@ -76,3 +76,26 @@ else:
     print("No encontrado")
     
 #Match: para saber si una cadena comienza con una expresion  
+if re.match(r'N[ie]c', 'A Nico le gustan los tacos'):
+    print('Encontrado')
+else:
+    print("No encontrado")
+    
+#Para saber si una cadena finaliza con una expresion utilizamos $
+if re.search(r'N[ie]c$', 'Que tal tu dia Nic'):
+    print("Encontrado")
+else:
+    print("No encontrado")
+    
+#Para especificar que un elemento es opcional usamos ?
+if re.search(r'N[ie]c?o', 'Hola Nico x2'):
+    print("Encontrado")
+else:
+    print("No encontrado")
+
+#Cuantificador, determina el caracter de la expresion que se repite un numero determinado de veces
+#Busca digitos
+if re.search(r'[0-9]{2}', 'Hola 45 Nico'):
+    print("Encontrado")
+else:
+    print("No encontrado")
