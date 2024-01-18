@@ -66,3 +66,13 @@ direcciones_correo = re.findall(patron_correo, texto)
 print("Direcciones de correo electrónico encontradas:")
 for direccion in direcciones_correo:
     print(direccion)
+
+#Y ahora mas funciones que vienen con las expresiones regulares que nos pueden ayudar a encontrar los valores y caracteres mas facilmente 
+
+#Complemento para este se utiliza el: ^
+if re.search(r'N[^ie]c', 'Hola Nico')!=None:
+    print("Encontrado")
+else:
+    print("No encontrado")
+    
+#Match: para saber si una cadena comienza con una expresion  
