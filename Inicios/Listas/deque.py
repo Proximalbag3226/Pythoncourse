@@ -1,8 +1,8 @@
-#El deque es una coleccion que puede actuar como cola 
+#El deque es una coleccion que puede actuar como pila 
 
 from collections import deque
 
-#tambien podemos hacer las colas de la siguiente manera con el import de la parte de arriba 
+#tambien podemos hacer las pilas de la siguiente manera con el import de la parte de arriba 
 # Crear un deque vacío
 mi_deque = deque()
 
@@ -56,7 +56,7 @@ lista_productos.extend([naranja])
 print(lista_productos)
 
 #Lo que hicimos fue introducir el elemento dentro de una lista que va a poder iterar extend y por lo tanto lo va agregar
-#Ahora tambien va un ejemplo que va ser bastante util para el manejo de colas y deque, que pasa si queremos agregar varios elementos
+#Ahora tambien va un ejemplo que va ser bastante util para el manejo de pilas y deque, que pasa si queremos agregar varios elementos
 manzana = Producto("Manzana", 7)
 pera = Producto("Pera", 3)
 pizza = Producto("Pizza", 89)
