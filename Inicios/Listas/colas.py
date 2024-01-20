@@ -1,7 +1,5 @@
 #Colas, las colas son estructuras de tipó fifo en otras palabras que el primero en entrar es el primero en salir al contrario que las 
 #Pilas que el ultimo en entrar es el primero en salir, al igual que estas en python no esta como tal pero podemos imitarla
-from collections import deque
-
 cola = ["Maria", "Alejando", "Jose", "Mario"]
 
 #Agregamos elmentos al final de la cola
@@ -57,29 +55,3 @@ class Cola:
 #Y si esta vacia entonces hacemos una asignacion del tamaño de la lista a o
     def esta_vacia(self):
         return len(self.items) == 0
-
-
-#tambien podemos hacer las colas de la siguiente manera con el import de la parte de arriba 
-# Crear un deque vacío
-mi_deque = deque()
-
-# Añadir elementos al final del deque
-mi_deque.append(1)
-mi_deque.append(2)
-mi_deque.append(3)
-
-# Añadir elementos al principio del deque, esto tiene la palabra left para poder ser mas intuitivo de saber en que parte se va a introducir el elemento
-mi_deque.appendleft(0)
-
-# Ver el contenido del deque
-print(mi_deque)
-
-# Eliminar elementos al final y al principio del deque
-elemento_final = mi_deque.pop()
-
-#Igualmente la palabra left presente para saber de que lado del deque estamos eliminando el elemento 
-elemento_inicio = mi_deque.popleft()
-
-# Ver el contenido del deque después de las eliminaciones
-print(mi_deque)
-

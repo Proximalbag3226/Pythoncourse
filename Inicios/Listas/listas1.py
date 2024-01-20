@@ -87,3 +87,19 @@ print(lista11)
 lista11.sort(reverse=True)
 print(lista11)
 
+#Aqui una peque;a actualizacion a las listas, las listas por comprension, estas listas mas que ser una lista diferente a las que conocemos de toda la vida
+#Son mas bien un metodo de creacion de listas para que el codigo sea mas conciso y comprensible, aqui un ejemplo de su sintaxis basica
+#nueva_lista = [expresion for elemento in secuencia if condicion]
+#Y aqui un ejemplo funcional 
+cuadrados = [x**2 for x in range(5)]
+#expresion: Es la expresión que se evalúa y se utiliza para construir cada elemento de la nueva lista.
+#elemento: Es una variable que toma cada valor de la secuencia.
+#secuencia: Es la secuencia de elementos sobre la cual se itera.
+#condicion (opcional): Es una condición que filtra los elementos de la secuencia. Solo los elementos que cumplen la condición se incluyen en la nueva lista.
+#Y tambien podemos incluir una condicion para filtrar
+numeros_pares = [x for x in range(10) if x % 2 == 0]
+
+
+
+
+

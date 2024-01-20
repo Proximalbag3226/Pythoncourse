@@ -48,3 +48,20 @@ print(len(equipo))
 
 #y para eliminar todo el valor del diccionario
 #equipo.clear()
+
+#Peque;a actualizacion de los diccionarios, donde veremos los diccionarios por comprension, estos son una manera mas concisa y facil de construir dirccionarios
+#Mas facil y legible de crear basados en iteraciones y expresiones, su sintaxis basica es la siguiente
+#nuevo_diccionario = {clave: valor for elemento in secuencia if condicion}
+#clave: Es la expresión que se evalúa y se utiliza como clave para cada par clave-valor en el nuevo diccionario.
+#valor: Es la expresión que se evalúa y se utiliza como valor correspondiente a la clave en el nuevo diccionario.
+#elemento: Es una variable que toma cada valor de la secuencia.
+#secuencia: Es la secuencia de elementos sobre la cual se itera.
+#condicion (opcional): Es una condición que filtra los elementos de la secuencia. Solo los elementos que cumplen la condición contribuirán a la construcción del nuevo diccionario.
+
+#Aqui un peque;o ejemplo de su uso
+cuadrados_dict = {x: x**2 for x in range(5)}
+
+#Y aqui con una condicion de filtrado
+numeros_pares_dict = {x: x**2 for x in range(10) if x % 2 == 0}
+
+

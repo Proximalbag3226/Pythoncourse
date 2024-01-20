@@ -71,3 +71,20 @@ print(conjunto2.isdisjoint(conjunto1))
 
 #conjuntos inmutables asi como las tuplas 
 conjunto8 = frozenset({1,2,3,4,5,6,7,8})
+
+#Actualizacion de los conjuntos para ver los conjuntos por compresion, esta es una forma de crear conjuntos en una sola linea de codigo para facilitar 
+#La escritura del codigo y su comprension, aqui su sintaxis
+#nuevo_conjunto = {expresion for elemento in secuencia if condicion}
+#expresion: Es la expresión que se evalúa y se utiliza para construir cada elemento del nuevo conjunto.
+#elemento: Es una variable que toma cada valor de la secuencia.
+#secuencia: Es la secuencia de elementos sobre la cual se itera.
+#condicion (opcional): Es una condición que filtra los elementos de la secuencia. 
+# Solo los elementos que cumplen la condición contribuirán a la construcción del nuevo conjunto.
+
+#Ejemplo
+cuadrados_set = {x**2 for x in range(5)}
+
+#Filtrado de elementos>
+numeros_pares_set = {x**2 for x in range(10) if x % 2 == 0}
+
+
