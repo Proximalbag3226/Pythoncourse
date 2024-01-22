@@ -87,7 +87,7 @@ print(lista11)
 lista11.sort(reverse=True)
 print(lista11)
 
-#Aqui una peque;a actualizacion a las listas, las listas por comprension, estas listas mas que ser una lista diferente a las que conocemos de toda la vida
+#Aqui una pequeña actualizacion a las listas, las listas por comprension, estas listas mas que ser una lista diferente a las que conocemos de toda la vida
 #Son mas bien un metodo de creacion de listas para que el codigo sea mas conciso y comprensible, aqui un ejemplo de su sintaxis basica
 #nueva_lista = [expresion for elemento in secuencia if condicion]
 #Y aqui un ejemplo funcional 

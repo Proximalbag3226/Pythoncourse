@@ -27,4 +27,33 @@ print(precio)
 #Como podemos obvservar la funcion ahora nos retorna  multiples valores en forma de tupla 
 #Recordemos que la tupla es una forma de almacenamiento de datos donde los datos almacenados dentro de ella son inmutables y solamente podemos consularlos con su indice
 #En este caso al retornarnos 3 valores y pedir dichos valores hemos desplegado los valores de la tupla en sus respectivas variables
+
+#Actualizacion, creo que no hace falta explicar mucho pero es importante mencionar que las funciones en python tienen como defalult retornar el valor de none 
+#Cuando no se define otro valor a retornar, esto quedara mejor explicado con un ejemplo 
+
+def funcion1():
+    print("Hola soy una funcion normal")
+
+funcion1()
+
+#Podemos manejar los returns de forma explicita o implicita, aqui un ejemplo de la primera manera 
+
+def funcion2(num):
+    if num<10:
+        return num **2
+    else:
+        return None
+
+#Aqui podemos obvservar que devuelve el valor none 
+print(type(funcion2(5)))
+print(type(funcion2(11)))
+
+#Y ahora de manera implicita 
+def funcion3(num) -> int:
+    if num < 10:
+        return num **2
+    else:
+        return
     
+print(type(funcion3(5)))
+print(type(funcion3(16)))    
