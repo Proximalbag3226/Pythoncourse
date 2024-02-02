@@ -1,0 +1,2 @@
+#Metaclases, estas son clases de las clases, es decir que la creacion de las instancias de la clase esta recibe como parametros otras clases 
+#Estas son una herramienta util y avanzada de python que permite
