@@ -41,11 +41,9 @@ def calculadora():
         
         print(f"El resultado de la operacion es: {resultado}")
 
-        continuar = input("Desea continuar (s/n)? ").strip()
-        if continuar == "s":
-            calculadora()
-        elif continuar == "n":
-            print("Tenga buen dia")
+        continuar = input("Desea continuar (s/n)? ").strip().lower()
+        if continuar != "s":
+            print("Tenga un buen dia")
             break
 calculadora()
     

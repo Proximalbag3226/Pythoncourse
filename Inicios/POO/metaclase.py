@@ -63,3 +63,10 @@ def mi_metodo(self):
 prueba2 = type('Prueba_metodo', (), {'costo': 5, 'mi_metodo': mi_metodo})
 prueba3 = prueba2()
 prueba3.mi_metodo()
+
+#Otro ejemplo mas de la creacion de propias metaclases 
+class Mimeta(type):
+    def __new__(self,class_name, bases, attrs):
+        print(f"Nombre {class_name}")
+        print(f"Base {bases}")
+        print(f"Atributos {attrs}")
