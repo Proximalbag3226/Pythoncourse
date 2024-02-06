@@ -66,7 +66,28 @@ prueba3.mi_metodo()
 
 #Otro ejemplo mas de la creacion de propias metaclases 
 class Mimeta(type):
+    
+    #La setenncia __new__ se ejecuta incluso antes que el __init__ y nos sirve para indicar como es que queremos llevar a cabo la construccion del objeto 
+    #Como parametros damos el nombre de la clase, su clase base y sus atributos al final vamos a llamar al consctructor type y retonrnar lo que obtenemos
     def __new__(self,class_name, bases, attrs):
         print(f"Nombre {class_name}")
         print(f"Base {bases}")
         print(f"Atributos {attrs}")
+        
+        #Creamos un atributo propio
+        d={}
+        for elemento, valor in attrs.item():
+            d[elemento] = valor
+        d['Mi atributo'] = '55'
+        
+        return type(class_name, bases, attrs)
+
+class miClase(metaclass = Mimeta):
+    a = 5
+    nombre = 'Zy'
+    
+    def imprime(self):
+        print(self.nombre * self.a)
+
+objeto1 = miClase()
+objeto1.imprime()    
