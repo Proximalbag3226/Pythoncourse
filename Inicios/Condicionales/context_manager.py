@@ -24,3 +24,36 @@ finally:
     archivo.close()
     
 #Ahora menejemos el error con un context manager
+
+class Cm():
+    
+    #En la inizializacion recibimos el archivo y abrir que es su modo de abertura 
+    def __init__(self, archivo, abrir):
+        self.archivo = open(archivo, abrir)
+    
+    #Aqui esta el codigo de entrada que lo identificamos por el print y retornamos el archivo abierto
+    def __enter__(self):
+        print("En la entrada")
+        return self.archivo
+    
+    #Para la salida tenemos una impresion de la salida y el archivo cerrado, en este caso esta parte del codigo es lo que queremos que simpre se ejecute
+    def __exit__(self, type, value, traceback):
+        print("En la salida")
+        
+        #Obttenemos la info de la exepcion 
+        print("type: " + type)
+        print("value: " + value)
+        print("tracebacktrace" + traceback)
+        
+        #Comenzamos el manejo de errores
+        if type == ZeroDivisionError:
+            print("No dividir entre 0")
+            return True
+        
+        self.archivo.close()
+        
+#Pomemos el context manager
+with Cm('archivo.txt', 'w') as archivo:
+    print("Aqui estamos en el context manager")
+    archivo.write("Holas")
+    a = 5/0
