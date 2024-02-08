@@ -23,3 +23,35 @@
 
 #Tenemos un concepto mas, el nivel efectivo. Este es el mismo que el nivel con la exepción de que no sea Nonset
 #Si creamos un loger y lo declaramos con Notset este buscara en sus antepasados el nivel mas cercano que no sea Nonset
+
+#Ahora vamos con la parte practica de los loggers
+#Para empezar vamos a importar la logging 
+import logging
+
+#Creamos el logger 
+miloger = logging.getLogger("Mi_logger")
+
+#Como vimos los loggers por defecto tiene el nivel Nonset y aqui lo comprobamos
+assert miloger.level == logging.NOTSET
+
+#Ahora pasamos con la parte del nivel efectivo, en este caso el nivel efectivo quedaria como root y root tiene nivel WARN, vamos a verificar
+assert miloger.getEffectiveLevel() == logging.WARN
+
+#Ahora veremos la creacion de los Streamhandeler para usarlo en la consola, osea que el log se va a desplegar en consola 
+handlerConsola = logging.StreamHandler()
+
+#Ahora lo agregamos al handler
+miloger.addHandler(handlerConsola)
+
+#Ahora mostraremos un mensaje de acuerdo con el nivel que estamos manejando 
+miloger.warning("Mensaje de nivel WARN")
+
+#Este mensaje no se muestra ya que es de menor nivel que el WARN
+miloger.debug("Mensaje de DEBUG")
+
+#Ahora si queremos cambiar el nivel del logger ya sea bajar o subir este nivel, cabe aclarar que para tener un nivel diferente de nuevo tenemos que cambiarlo manualmente o
+#Directamente resetear el kernel ya que el nivel del logger no se resetea al volver a ejecutar el programa 
+miloger.setLevel(logging.DEBUG)
+
+#Y ahora si podemos mostrar el programa
+miloger.debug("Mensaje de debug x2")
