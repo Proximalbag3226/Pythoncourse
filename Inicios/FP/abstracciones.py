@@ -153,3 +153,72 @@ def mapeo(f,lista):
 def incrementar1(lista):
     return mapeo(lambda x: x+1, lista)
 
+print("Mayor", mayor([7,34,5,234,5]))
+print("Conteo", conteo([8,5,4,3,2,1]))
+print("Sumatoria", sumatoria([1,67,1,4,5,1]))
+print("Incrementar1", incrementar1([1,2,5,67,2]))
+
+#Ahora algunos ejemplos donde podemos utilizar la reutilizacion de codigo en el paradigma de FP donde tambien podemos implementar las abstracciones 
+#Podemos parametrizar algun tipo de codigo pero con diferntes casos por ejemplo: 
+def noc(x):
+    return x+5
+
+#Generalizamos sobre un computo en especial y si nos damos cuenta las funciones son muy similares entre si y es mucho trabajo y repeticion estar 
+#Repitiendo los prints y las funciones asi:
+
+def f1(x):
+    print(f"En f1 el valor inicial es {x}")
+    r = f2(x) + f3(x)
+    print(f"El valor final es de {r}")
+    return r
+
+def f2(x):
+    print(f"En f2 el valor inicial es {x}")
+    r = x*2
+    print(f"El valor final es de {r}")
+    return r
+def f3(x):
+    print(f"En f3 el valor inicial es {x}")
+    r = x-5
+    print(f"El valor final es de {r}")
+    return r
+
+print(f1(10))
+
+#Ahora vamos a generalizar el codigo 
+def fn(nombre, f, x):
+    print(f"En {nombre} el valor inicial es de {x}")
+    r = f(x)
+    print(f"El valor final es de {r}")
+    return r
+
+def f11(x):
+    return fn("f11", lambda x: f2(x) + f3(x), x)
+
+def f21(x):
+    return fn("f21", lambda x: x*2, x)
+
+def f31(x):
+    return fn("f31", lambda x: x-5, x)
+
+f11(10)
+
+#Y si aun queremos reducir aun mas el codigo podemos utilizar decoradores para mejorar el codigo y su legibilidad
+
+#Aqui creamos y definimos nuestro decorador donde recibimos la funciona a decorar y retorna los "atributos" de la fn
+def f_decorador(f):
+    
+    #El nombre de la funcion lo obtenemos de .__name__ pasamos f que es la funcion y el valor de x 
+    return lambda x: fn(f.__name__,f,x)
+
+@f_decorador
+def f1_1(x):
+    return f2_2(x) + f3_3(x)
+
+@f_decorador
+def f2_2(x):
+    return x *2
+
+@f_decorador
+def f3_3(x):
+    return x - 5
