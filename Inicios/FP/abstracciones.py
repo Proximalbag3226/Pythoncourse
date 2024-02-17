@@ -73,4 +73,83 @@ print(conteo_suma(lambda n: n, [1,2,3,4]))
 #Como podemos obvservar estas funciones llevan a cabo las tareas de las declaradas mas arriba, suma_lista y conteo, pero ahora en una sola funcion y con lambda 
 #Esto es la prueba mas clara de abstraccion ya que estamos simplificando su concepto y optimizando estas mismas funciones en una sola y de manera mas eficiente 
 #Y si cambiamos los valores de las listas estan tendran el mismo resultado de las anteriores, ya que si obvservamos bien cada una de las lambda retorna 
-#Uno de los valores que las funciones conteo y suma_lista ya retornaban en si mismas y como cereza del pastel tambien implementamos la recursion dentro del codigo 
+#Uno de los valores que las funciones conteo y suma_lista ya retornaban en si mismas y como cereza del pastel tambien implementamos la recursion dentro del codigo
+
+#Bien ahora vamos a crear abstracciones mas complicadas     
+def mayor(numeros, mayor_actual = 0):
+    if numeros == []:
+        return mayor_actual
+    else:
+        if numeros[0] > mayor_actual:
+            mayorN = numeros[0]
+        else:
+            mayorN = mayor_actual
+    return mayor(numeros[1:], mayorN)
+
+print(mayor([1,2,3,4,5,5,15]))
+
+#En esta funcion lo que hacemos es generalizar las acciones que realizamos en las abstracciones pasadas
+def reducida(f, lista, acc):
+    
+    #Si obvservamos bien cada funcion pasada contiene una primera condicion que nos retorna algo en caso de que la lista este vacia
+    if lista == []:
+        
+        #En este vamos a almacenar lo que retorna la condicion en la variable acc
+        return acc
+    else:
+        
+        #En caso contrario podremos ejecutar la funcion que se proporcione como argumento y que aplicaremos a la lista en su indice 0 proporcionando tambien el acc
+        #Ya que las funciones que hicimos anteriormente cumplen con dicha condicion de argumentos que podemos pasar como son la lista podemos simplñificarlas aqui
+        accN = f(lista[0], acc)
+        
+        #Y por ultimo realizamos la recursion nesesaria para el correcto funcionamiento 
+        return reducida(f, lista[1:], accN)
+
+#Ahora teniendo la "plantilla" del codigo para realizar las accines pasadas vamos a replicar las funciones anteriores pero ahora usando esta nueva abstraccion 
+#Y obviamente con funciones lambda para optimizar
+def mayor(lista):
+    return reducida(lambda num, acc: num if num>acc else acc, lista, 0) 
+
+def conteo(lista):
+    return reducida(lambda _, acc : acc +1, lista, 0)
+
+def sumatoria(lista):
+    return reducida(lambda num, acc: num+acc, lista, 0)  
+
+print("Mayor", mayor([12,3,7,8,14]))
+print("Conteo", conteo([1,2,3,45,12]))
+print("Sumatoria", sumatoria([1,2,3,4]))
+
+#Usaremos la funcion de reduccion para ver si podemos simplificar el incremento de 1 
+def mapeo(f,lista):
+    #Aqui realizamos la concatenacion de lo que nos retornaba la lista
+    return reducida(lambda el, acc: acc + [f(el)], lista, [])
+
+def incrementa_1(lista):
+    return mapeo(lambda n: n+1, lista)
+
+print(incrementa_1([1,2,3,4,5]))
+
+#Ahora vamos a utilizar herramientas de codigo mas modernas, que en si no se deberian utilizar en FP ya que es preferible la recursividad por sobre la iteracion de elementos
+#Pero para que sea mejor visualizado usaremos ciclos for para los siguientes ejemplos 
+
+def reducida(f, lista, acc):
+    for el in lista:
+        acc = f(el, acc)
+    return acc
+
+def mayor(lista):
+    return reducida(lambda x, acc: x if x>acc else acc, lista, 0)
+    
+def conteo(lista):
+    return reducida(lambda _, acc: acc+1, lista, 0)
+
+def sumatoria(lista):
+    return reducida(lambda x, acc: x+acc, lista, 0)
+
+def mapeo(f,lista):
+    return reducida(lambda x, acc: acc+[f(x)], lista, [])
+
+def incrementar1(lista):
+    return mapeo(lambda x: x+1, lista)
+
