@@ -1,1 +1,0 @@
-#Ahora vamos a utilizar la segunda funcion que creamos en el test1 para poder utilizar otro tipo de test, el assertRaises
