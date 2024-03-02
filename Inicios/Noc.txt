@@ -1,0 +1,25 @@
+No se si sigues leyendo esta cosa o algo asi pero esto es como un aviso por asi decirlo que pues hasta este ultimo commit, podrian ser los aspectos generales de python 
+faltan algunas cosas que me quedan por hacer y poner aqui pero no es tanto, ya que solamente son como tal los aspectos generales entonces no entrare en librerias que son 
+para otros usos igual si quieres que las suba ahi pones algo o no c no reviso mucho github pero talvez me llegue una notificacion creo, en fin igual dejare un poco esto 
+o ya no subire tantas cosas ya ando ya en visperas de entrar a un trabajo entonces trato de centrarme mas en desarrollar otros proyectos y practicar las cosas que ya ocupo mas 
+pero creo es suficiente para que puedas aprender python, aunque te recuerdo, codificar no es programar, sip es una parte de pero tambien estudia lo demas algoritmos 
+patrones de diseño, documentacion, diagramas, bitacoras, metodologias de programacion, paradigmas etc. y sobre todo ademas de leer y ver tutoriales en internet 
+practica, sobre todo eso la practica es lo mas importante la teoria igual pero la practica por sobre todo te ayudara a tener buenas practicas de codigo limpio.
+Aprende bien primero los fundamentos de la programacion y no solo a codificar y tambien las cosas del lenguaje que te interese, no olvides tambien a las bases de datos 
+te recomiendo que estudies bien BD porque aveces suele ser confuso en algunas partes como la normalizacion y si es relacional o no, ten bases solidas y ya despues te lanzas a lo fuerte 
+no quieras empezar de golpe todo, y creo que es lo que te puedo recomendar, ya a la hora de entrar a cosas como numpy y librerias de ese estilo repasa matematicas 
+algebra y algebra lineal para el manejo de matrices y vectores principalmente, probabilidad tambien estudiala mucho, calculo un poco, aprende algoritmos en pseudocodigo
+y su implementacion en diagramas para que sea mas facil entenderlos y luego los pases a codigo.
+
+Creo esto es el mejor regalo que te puedo dejar y el mejor recuerdo de mi talvez, no se que sea ya, odiame, tomame como un idiota, pasa de largo esto o no lo se esto fue echo para ti 
+solamente para ti, es como las flores que nunca te llegue a dar, pero esto no se marchitara nunca, es conocimiento, una parte de mi conocimiento y de mi tiempo puesto en esto 
+es lo mejor que te puedo dejar de mi, una parte de lo que se, una parte de lo que me apasiona, una flor eterna talvez no es mucho ni lo mejor, pero tiene empeño la verdad. Las noches
+codificando esto no han sido en vano no si esto te ayuda en el futuro, nada es en vano, se que tienes mucho potencial para esto ten dedicacion y pasion por ello como siempre la tienes 
+no te presiones mucho e intentalo poco a poco y por sobre todo no te rindas tu no estas sola, repasa bien hasta que entiendas y no solamente codifiques, estudia lo demas en cuanto a programacion
+aunque no lo parezca la documentacion y los diagramas y el papeleo son importantes, en fin creo que es todo por el aviso o simplemente no se que mas decir. 
+
+Zy
+ 
+
+
+35.861389°, 139.645556°
