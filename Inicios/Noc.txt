@@ -11,8 +11,9 @@ no quieras empezar de golpe todo, y creo que es lo que te puedo recomendar, ya a
 algebra y algebra lineal para el manejo de matrices y vectores principalmente, probabilidad tambien estudiala mucho, calculo un poco, aprende algoritmos en pseudocodigo
 y su implementacion en diagramas para que sea mas facil entenderlos y luego los pases a codigo.
 
-Creo esto es el mejor regalo que te puedo dejar y el mejor recuerdo de mi talvez, no se que sea ya, odiame, tomame como un idiota, pasa de largo esto o no lo se esto fue echo para ti 
-solamente para ti, es como las flores que nunca te llegue a dar, pero esto no se marchitara nunca, es conocimiento, una parte de mi conocimiento y de mi tiempo puesto en esto 
+Creo esto es el mejor regalo que te puedo dejar y el mejor recuerdo de mi talvez, no se que sea ya, odiame, tomame como un idiota, pasa de largo esto o no lo se esto fue echo 
+para ti solamente para ti, es como las flores que nunca te llegue a dar, o mas bien que quedaron bajo un cielo lluvioso y un idiota empapado creo a esto no le puede llover o 
+talvez si si le cae una gotera al pc, pero esto no se marchitara nunca, es conocimiento, una parte de mi conocimiento y de mi tiempo puesto en esto 
 es lo mejor que te puedo dejar de mi, una parte de lo que se, una parte de lo que me apasiona, una flor eterna talvez no es mucho ni lo mejor, pero tiene empeño la verdad. Las noches
 codificando esto no han sido en vano no si esto te ayuda en el futuro, nada es en vano, se que tienes mucho potencial para esto ten dedicacion y pasion por ello como siempre la tienes 
 no te presiones mucho e intentalo poco a poco y por sobre todo no te rindas tu no estas sola, repasa bien hasta que entiendas y no solamente codifiques, estudia lo demas en cuanto a programacion
