@@ -24,7 +24,7 @@ años = np.arange(2000, 2025)
 cantidad_dulces = 1.2 * (años - 2010) ** 2 + 4500
 
 #Añadimos ruido para hacerlo mas relizta pero no tanto 
-cantidad_dulces += np.random.normal(loc=0, scale=15, size=len(años))  
+cantidad_dulces += np.random.normal(loc=0, scale=51, size=len(años))  
 
 #Asegurarse de que los valores no sean negativos y separar cada valor con una coma 
 cantidad_dulces = np.maximum(cantidad_dulces, 0)
