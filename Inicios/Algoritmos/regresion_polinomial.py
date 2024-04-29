@@ -13,6 +13,7 @@
 #Importamos las librerias 
 import numpy as np
 import matplotlib.pyplot as plt
+from sklearn.metrics import mean_squared_error
 
 #Generamos los datos aleatorios para el modelo que en este caso sera de produccion de dulces por año 
 np.random.seed(0)
@@ -24,7 +25,7 @@ años = np.arange(2000, 2025)
 cantidad_dulces = 1.2 * (años - 2010) ** 2 + 4500
 
 #Añadimos ruido para hacerlo mas relizta pero no tanto 
-cantidad_dulces += np.random.normal(loc=0, scale=51, size=len(años))  
+cantidad_dulces += np.random.normal(loc=0, scale=1, size=len(años))  
 
 #Asegurarse de que los valores no sean negativos y separar cada valor con una coma 
 cantidad_dulces = np.maximum(cantidad_dulces, 0)
@@ -66,15 +67,12 @@ for i in range(0,10):
     
     #Creamos la prediccion con base en los coeficientes y el año 
     prediccion = np.polyval(coeficiente, año_prediccion)
-    print(f"Para el año {año_prediccion} con el grado{i} la prediccion es {prediccion}")
+    print(f"Para el año {año_prediccion} con el grado {i} la prediccion es {prediccion}")
     
     #Graficamos el polinomio para la prediccion
     plt.plot(x, polinomio(x), label=f'Grado {i}')
-    
-#Ahora nos preguntaremos como podemos elegir el dato correcto que nos permita tener la prediccion mas cercana a la relidad y para esto vamos a calcular el ECM para 
-#Cada uno de los grados polinomiales
-    
-#Graficamos los datos reales
+
+
 plt.scatter(x, y, color='red', label='Datos reales')
 
 #Configuraciones adicionales del gráfico
@@ -84,3 +82,53 @@ plt.ylabel('Cantidad de Dulces')
 plt.grid(True)
 plt.legend()
 plt.show()
+
+    
+#Ahora nos preguntaremos como podemos elegir el dato correcto que nos permita tener la prediccion mas cercana a la relidad y para esto vamos a calcular el ECM para 
+#Cada uno de los grados polinomiales    
+
+#Creamos un dataset para almacenar los ECM
+ECMs = []
+
+#Creamos un for para rango de polinomios 
+for i in range(0, 9):
+    
+    #Obtenemos los datos de los polinomios 
+    coef = np.polyfit(x, y, i)
+    y_predict = np.polyval(coef, x)
+    
+    #Y con esta funcion que importamos podemos obtener el ECM de manera mas simple
+    ECM = mean_squared_error(y, y_predict)
+    ECMs.append(ECM)
+    print(f"Para el grado {i} el ECM es de {ECM}")
+    
+#Graficamos el ECM
+plt.title("Grado del polinomio vs ECM")
+plt.plot(range(0, 9), ECMs, "--", linewidth=3, color="blue")
+plt.grid("on")
+plt.show()
+
+#Podemos calcualar el ECM tambien de esta manera 
+#año  = 2025
+#grado = np.arange(0 , 20 + 1, 1)
+#aprox = np.array([])
+#y_predict = np.array([])
+
+#for i in grado:
+    #coef = np.polyfit(x,y,i)
+    #p = np.polyval(coef, año)
+    #aprox = np.append(aprox, p)
+    
+    #y_predict = np.array([])
+    #for j in x:
+        #y_predict1 = np.polyval(coef, j)
+        #y_predict = np.append(y_predict, y_predict1)
+    
+    
+    #ECM = (sum((y -y_predict)**2))/len(y)
+    #print(f"Para el grado {i} el ECM es de {ECM}")
+    
+
+#En conclusion este es solo un ejemplo con datos irreales y obtenidos aleatoriamente por lo tanto con datos reales y ajustados y noramilzados correctamente puede 
+#Ser de mayor confiabilidad y una aproximacion mas real, ademas en codigo no parece tan dificil de entender pero lo realmente importante es entender la teoria detras 
+#Del funcionamiento de este modelo 
